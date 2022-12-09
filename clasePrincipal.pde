@@ -47,8 +47,8 @@ class Principal {
       float distancia = dist(e.x, e.y, rockets[i].x, rockets[i].y);
       if (distancia<30) {
         cantidad = cantidad - 1;
-        e.x = 192;
-        e.y = 0;
+        e.x = 140;
+        e.y = 40;
       }
     }
   }
