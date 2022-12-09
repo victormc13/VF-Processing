@@ -3,17 +3,22 @@ class Principal {
   int estado;
   Limites [] lim = new Limites[4];
   Rocket [] rockets = new Rocket [1];
+  Rocket [] rockets1 = new Rocket [1];
   Vida [] life = new Vida [cantidad];
   Eco e;
   Fondos f; 
   Pokeball p;
+  int dos = 350;
 
   Principal () {
     for (int i=0; i<rockets.length; i++) {
-      rockets [i] = new Rocket(180, 0);
+      rockets [i] = new Rocket(190+i*dos, 0);
+    }
+    for (int i=0; i<rockets.length; i++) {
+      rockets1 [i] = new Rocket(550+i*dos, 500);
     }
     for (int i=0; i<cantidad; i++) {
-      life [i] = new Vida(490+i*50, 0);
+      life [i] = new Vida(490+i*50, -30);
     }
     e = new Eco (140, 40, 3);
     f = new Fondos ();
@@ -25,24 +30,28 @@ class Principal {
   }
 
   void jugando() {
-    f.paisajeprincipal();
+    f.mapa();
     e.dibujar();
     p.objetivo();
     for (int i=0; i<rockets.length; i++) {
-      rockets [i].Mueve();
+      rockets [i].mover();
       rockets [i].Dibujar();
     }
-    Sechocan();
-    funcionando();
+    for (int i=0; i<rockets.length; i++) {
+      rockets1 [i].mover1();
+      rockets1 [i].Dibujar();
+    }
+    capturado();
+    andando();
   }
 
-  void funcionando() {
+  void andando() {
     for (int i=0; i<cantidad; i++) {
-      life [i].dibu();
+      life [i].vida();
     }
   }
 
-  void Sechocan() {
+  void capturado() {
     for (int i=0; i<rockets.length; i++) {
       float distancia = dist(e.x, e.y, rockets[i].x, rockets[i].y);
       if (distancia<30) {
@@ -80,10 +89,10 @@ class Principal {
 
   void estados() {
     if (estado == 0) {
-      f.inicioMostrar();
+      f.inicio();
     }
     if (estado == 1) {
-      f.instrucciones();
+      f.reglas();
     }
     if (estado == 2) {
       jugando();
@@ -95,7 +104,7 @@ class Principal {
       f.perdiste();
     }
     if (estado == 5) {
-      f.Final();
+      f.fin();
     }
   }
 

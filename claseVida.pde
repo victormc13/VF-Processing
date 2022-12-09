@@ -9,7 +9,7 @@ class Vida {
     y = vy;
   }
 
-  void dibu() {
+  void vida() {
     image(corazon, x, y);
   }
 }

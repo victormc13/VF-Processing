@@ -12,12 +12,10 @@ class Eco {
     }
   }
   void dibujar () {
-    image(eco[i], x, y);
+    image(eco[i], x, y, 30, 40);
   }
 
   void mover (int precionar) {
-
-
     if (precionar == RIGHT) {
       x +=17;
       i = 0;

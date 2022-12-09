@@ -5,22 +5,32 @@ class Rocket {
 
   Rocket(int posx, int posy) {
     rocket = loadImage("rocket1.png");
-    //rocket.resize(40, 50);
+   
     x = posx;
     y = posy;
-    velY = 5;
+    velY = 2;
   }
 
   void Dibujar() {
     image(rocket, x, y);
   }
 
-  void Mueve() {
+  void mover() {
     if (y<0) {
-      velY=5;
+      velY=2;
     }
-    if (y>530) {
-      velY=-5;
+    if (y>220) {
+      velY=-2;
+    }
+    y=y+velY;
+  }
+  
+  void mover1() {
+    if (y<280) {
+      velY=2;
+    }
+    if (y>500) {
+      velY=-2;
     }
     y=y+velY;
   }

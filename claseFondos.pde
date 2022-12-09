@@ -11,11 +11,11 @@ class Fondos {
     }
   }
 
-  void inicioMostrar () {
+  void inicio () {
     image(fondos[0], fx, fy, 700, 600);
   }
 
-  void instrucciones() {
+  void reglas() {
     image(fondos[1], fx, fy, 700, 600);
   }
 
@@ -23,7 +23,7 @@ class Fondos {
     image(fondos[2], fx, fy, 700, 600);
   }
 
-  void paisajeprincipal() {
+  void mapa() {
     image(fondos[3], fx, fy, 700, 600);
   }
 
@@ -31,7 +31,7 @@ class Fondos {
     image(fondos[4], fx, fy, 700, 600);
   }
 
-  void Final() {
+  void fin() {
     image(fondos[5], fx, fy, 700, 600);
   }
 }
