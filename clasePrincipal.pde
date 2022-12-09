@@ -112,14 +112,14 @@ class Principal {
     }
     if (estado == 2) {
       float distancia2 = dist(e.x, e.y, p.px, p.py);
-      if (distancia2<50) {
+      if (distancia2<60) {
         estado = 3;
       }
     }
     if (estado == 3 || estado == 4) {
       cantidad = 3;
-      e.x = 192;
-      e.y = 0;
+      e.x = 140;
+      e.y = 40;
       if (tecla == 'R' || tecla == 'r') {
         estado = 2;
       }

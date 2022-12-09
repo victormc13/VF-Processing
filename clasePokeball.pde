@@ -7,7 +7,7 @@ class Pokeball {
     px = 370;
     py = 570;
     pokeball = loadImage("pokeball.png");
-    pokeball.resize(20, 20);
+    pokeball.resize(25, 25);
   }
 
   void objetivo() {
