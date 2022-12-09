@@ -16,12 +16,12 @@ void setup() {
 
 void draw() {
   pr.display();
-  if (keyPressed && pr.estado==2) {
+  if (keyPressed && pr.escenarios==2) {
     pr.moverEco(keyCode);
   }
   pr.perder();
 }
 
 void keyPressed() {
-  pr.cambiarEstado(keyCode);
+  pr.cambiarEscenarios(keyCode);
 }

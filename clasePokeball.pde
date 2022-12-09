@@ -3,14 +3,14 @@ class Pokeball {
   int px;
   int py;
 
-  Pokeball () {
+  Pokeball () {//constructor
     px = 370;
     py = 570;
     pokeball = loadImage("pokeball.png");
     pokeball.resize(25, 25);
   }
 
-  void objetivo() {
+  void objetivo() { //ganar
     image(pokeball, px, py);
   }
 }

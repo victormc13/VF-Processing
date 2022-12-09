@@ -2,7 +2,7 @@ class Fondos {
   PImage [] fondos = new PImage [6];
   int fx, fy;
 
-  Fondos() {
+  Fondos() {// constructor
     fx = 0;
     fy = 0;
     for (int i=0; i<6; i++) {

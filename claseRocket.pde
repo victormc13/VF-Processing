@@ -3,7 +3,7 @@ class Rocket {
   int x, y;
   int velY;
 
-  Rocket(int posx, int posy) {
+  Rocket(int posx, int posy) { //constructor
     rocket = loadImage("rocket1.png");
    
     x = posx;
