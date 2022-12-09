@@ -36,20 +36,3 @@ class Eco {
     }
   }
 }
-
-
-//class Personaje {
-//  PImage eco;
-//  int poscx, poscy;
-
-//  Personaje () {
-//    poscx = 130;
-//    poscy = 0;
-//    eco = loadImage("eco3.png");
-//    eco.resize(30, 40);
-//  }
-
-//  void dibujar() {
-//    image(eco, poscx, poscy);
-//  }
-//}
